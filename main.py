@@ -15,7 +15,7 @@ def get_giveaways(platform=None, type=None, sort_by=None):
         params['type'] = type
     if sort_by:
         params['sort-by'] = sort_by
-
+ 
     response = requests.get(url, params=params)
     response.raise_for_status()
     return response.json()
